@@ -1,0 +1,291 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, orange, blue);
+    padding: 20px;
+}
+
+@keyframes textAnimation {
+    0% {transform: translatey(20px); opacity : 0;}
+    50% {transform: translateY(-10px); opacity: 0.5;}
+    100%{transform: translateY(0); opacity: 1;}
+}
+
+.memories h1 {
+    color : #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: textAnimation 1s ease-out;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: center;
+    
+}
+
+.img {
+    flex: 1 1 calc(33% - 20px); 
+    max-width: calc(33% - 20px);
+    padding : 10px;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+
+@keyframes fadeInUp {
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+
+.img:nth-child(1){
+    animation-delay: 0;
+}
+.img:nth-child(2){
+    animation-delay: 0.3s;
+}
+.img:nth-child(3){
+    animation-delay: 0.6s;
+}
+.img:nth-child(4){
+    animation-delay: 0.9s;
+}
+.img:nth-child(5) {
+    animation-delay: 1.2s; 
+}
+.img:nth-child(6) {
+    animation-delay: 1.5s; 
+}
+
+
+
+.img img {
+    width: 100%; 
+    height: 300px; 
+    border : 2px solid #fff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 
+                0 0 15px rgba(0, 0, 0, 0.3), 
+                0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.memories{
+    display: none;
+}
+
+#music {
+    display: none;
+}
+
+#btn {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color:rgb(247, 200, 12);
+    border: none;
+    color : #fff;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color:rgba(248, 199, 3, 0.862);
+}
+
+audio {
+    display: none;
+}
+
+#btn1 {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color:rgb(181, 12, 247);
+    border: none;
+    color : #fff;
+    cursor: pointer;
+}
+
+#btn1:hover {
+    background-color:rgba(165, 10, 227, 0.892);
+}
+
+
+.memories p{
+    display :inline-flex;
+    padding: 2px;
+    background-color: rgb(253, 7, 122);
+    border-radius: 10px;
+    margin-top: 5px;
+    color : #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.cake1 {
+
+    display : none;
+}
+
+.box2 {
+    margin-left: 50px;
+    width : 250px;
+    height : 150px;
+    background: linear-gradient(rgb(241, 196, 15), rgb(230, 126, 34));
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+
+}
+
+.box1 {
+
+    width : 180px;
+    height : 100px;
+    background: linear-gradient(rgb(241, 196, 15), rgb(230, 126, 34));
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-left: 85px;
+}
+
+.box3 {
+    height : 10px;
+    width : 320px;
+    background: linear-gradient(black, brown);
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+.candles {
+    display : flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 54px;
+    padding-right: 54px;
+    
+   
+}
+
+.wick {
+    height : 30px;
+    width : 10px;
+    background : linear-gradient(blue,black);
+    margin-left: 16px;
+}
+
+.flame {
+    width : 10px;
+    height : 20px;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 50%;
+    background : linear-gradient(aqua,yellow);
+    margin-left: 20px;
+    animation: flicker 0.2s infinite;
+}
+
+
+@keyframes flicker {
+    0%, 100% { transform: translateX(-50%) translateY(0) scale(1); }
+    50% { transform: translateX(-50%) translateY(-2px) scale(1.1); }
+}
+
+#btn2 {
+    margin-top : 20px;
+    position: relative;
+    left : 12px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border : none;
+    font-size: 20px;
+    background-color: red;
+    color : #fff;
+    cursor: pointer;
+}
+
+#btn2:hover {
+    background-color:rgba(255, 0, 0, 0.73);
+}
+
+.message {
+    display : none;
+}
+
+.vedio {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ved video {
+    border-radius: 15px;
+    position : absolute;
+    left : 450px;
+    top : 30px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 
+                0 0 15px rgba(0, 0, 0, 0.3), 
+                0 0 30px rgba(0, 0, 0, 0.2); 
+}
+
+.gift {
+    margin-top: 400px;
+}
+
+.gift button{
+    height: 150px;
+    width: 200px;
+    border-radius: 15px;
+    background-image: url("birthdaycake1.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 
+                0 0 15px rgba(0, 0, 0, 0.3), 
+                0 0 30px rgba(0, 0, 0, 0.2);
+                
+    cursor: pointer;
+
+}
+
+
+#msg {
+    margin-top: 20px;
+    background: orange;
+    display : inline-flex;
+    padding : 10px;
+    border-radius: 15px;
+    border : none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 
+                0 0 15px rgba(0, 0, 0, 0.3), 
+                0 0 30px rgba(0, 0, 0, 0.2);
+    color : white;
+    cursor: pointer;
+}
+
+
